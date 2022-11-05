@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tedx IIT Guwahati</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav_bar" h="17">
+        <div id="first" percent = "1.5">
+            <div>
+                <span id="tedx" class="lato">
+                    TED<sup>x</sup>
+                </span>
+                <span id="iitg" class="lato">
+                    IITGuwahati
+                </span>
+            </div>
+            <div id="tedfullform">
+                <span id="x" class="lato">x</span><span id="equal"> = independently organgized TED event</span>
+            </div>
+        </div>
+        <ul id="list">
+            <li class="lato">Home</li>
+            <li class="lato">Talks</li>
+            <li class="lato">About us</li>
+            <li class="lato">Contact us</li>
+        </ul>
+    </div>
+    <div id="body"></div>
+    <div id="body1">dc</div>
+    <script>
+        var ele = document.getElementsByClassName("nav_bar");
+        var f = document.getElementById("first");
+        window.addEventListener('scroll',function doit(){
+            var rect = document.getElementById("body").getBoundingClientRect();
+            if(rect.top<8){
+                let currentHeight = ele[0].getAttribute("h");
+                let targetHeight = 15;
+                let fill = setInterval(function(){
+                    if(currentHeight<targetHeight){
+                        clearInterval(fill);
+                        return;
+                    }
+                    let temp = (+currentHeight)-0.1;
+                    ele[0].style.height = temp + "vh";
+                    currentHeight = temp;
+                    let currentPercent = f.getAttribute("percent");
+                    if((+currentPercent)>1.2){
+                        let temp2 = (+currentPercent)-0.15;
+                        currentPercent = temp2;
+                        f.style.marginTop = temp2 + "%";
+                        f.setAttribute("percent",temp2);
+                    }
+                },1);
+                ele[0].setAttribute("h",15);
+                ele[0].style.opacity = 1;
+            }else{
+                let currentHeight = ele[0].getAttribute("h");
+                let targetHeight = 17;
+                let fill = setInterval(function(){
+                    if(currentHeight>targetHeight){
+                        clearInterval(fill);
+                        return;
+                    }
+                    let temp = (+currentHeight)+0.1;
+                    ele[0].style.height = temp + 'vh';
+                    currentHeight = temp;
+                    let currentPercent = f.getAttribute("percent");
+                    if((+currentPercent)<1.5){
+                        let temp2 = (+currentPercent)+0.15;
+                        currentPercent = temp2;
+                        f.style.marginTop = temp2 + "%";
+                        f.setAttribute("percent",temp2);
+                    }
+                },1);
+                ele[0].setAttribute("h","17");
+                ele[0].style.opacity = 0.8;
+            }
+        });
+    </script>
+</body>
+
+<!-- <script type="text/Javascript" src="navProg.js"></script> -->
+</html>

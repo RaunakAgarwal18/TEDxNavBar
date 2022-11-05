@@ -1,0 +1,85 @@
+.nav_bar #first div div{
+    display: inline;
+}
+.nav_bar{
+    z-index: 1;
+    background-color: black;
+    width: 100vw;
+    height: 17vh;
+    color: white;
+    opacity: 0.8;
+    margin-top: -1.49vw;
+    margin-left: -0.5vw;
+    position: fixed;
+}
+#tedx{
+    color: red;
+    font-weight: 900;
+    font-size: 2.5vw;
+}
+#iitg{
+    font-weight: 500;
+    font-size: 2.5vw;
+    margin-left: -1vw;
+}
+#tedfullform{
+    font-size: 1vw;
+}
+#first{
+    width:25vw;
+    margin-top: 1.2%;
+    margin-left: 7vw;
+    display: inline-block;
+}
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+#body{
+    width: 100vw;
+    height: 100vh;
+    margin-left: 2.5vw;
+    background-image: url(tedx.png);
+    filter: brightness(50%);
+    background-repeat: no-repeat;
+}
+#tedfullform{
+    margin-top: -0.5vw;
+}
+#x{
+    color: red;
+    font-weight :bold;
+    font-size: 1.2vw;
+}
+#equal{
+    font-size: large;
+    font-weight: 500;
+}
+#list{
+    display: inline-block;
+    color:white;
+    list-style: none;
+    position: relative;
+    bottom: 0.8vw;
+    left :15.9vw;
+}
+#list li{
+    display: inline-block;
+    margin-left: 5.3vw;
+    font-size: 1.39vw;
+    font-weight: 500;
+}
+#list li:hover{
+    color: red;
+    cursor: pointer;
+}
+#body1{
+    color: white;
+    width: 1000px;
+    height: 1000px;
+    margin-left: 2vw;
+    background-color: blueviolet;
+}
+.lato{
+    font-family: 'lato',sans-serif;
+}
